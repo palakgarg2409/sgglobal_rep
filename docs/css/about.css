@@ -1,0 +1,315 @@
+#products{
+    overflow-x: hidden;
+}
+
+#about{
+    overflow-x: hidden;
+}
+
+.about-container{
+    padding: 10% 5% 0;
+}
+
+.about-sec{
+    color: white;
+    background-color: #001F3F;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 100px;
+    position: relative;
+}
+
+.about-logo{
+    top: -75px;
+    height: 150px;
+    position: absolute;
+}
+
+.about-logo-back{
+    position: absolute;
+    top: -75px;
+    height: 150px;
+    width: 150px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+@media(max-width:790px){
+    .about-logo{
+        height: 100px;
+        top: -50px;
+    }
+
+    .about-logo-back{
+        height: 110px;
+        width: 110px;
+        top: -55px;
+    }
+}
+
+.ab, .ut{
+    display: inline;
+    position: absolute;
+    font-size: 70px;
+    top: -60px;
+    color: #001F3F;
+    font-weight: 900;
+}
+
+.abb, .utb{
+    display: inline;
+    position: absolute;
+    font-size: 70px;
+    top: -60px;
+    color: #001F3F;
+    -webkit-text-stroke: 19px white;
+    font-weight: 900;
+}
+
+@media(max-width: 600px){
+    .ab, .ut{
+        font-size: 50px;
+        top: -40px;
+    }
+    
+    .abb, .utb{
+        font-size: 50px;
+        top: -40px;
+    }
+}
+
+.about-desc{
+    padding: 80px 100px 0;
+    text-align:justify;
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: italic;
+    font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    margin-bottom: 4rem;
+    text-align: left;
+}
+
+@media(max-width: 900px){
+    .about-desc{
+        padding: 80px 50px 0;
+    }
+}
+
+@media(max-width: 450px){
+    .about-desc{
+        padding: 80px 10px 0;
+    }
+}
+
+.stage-index{
+    display: flex;
+    font-family: 'Kanit', sans-serif;
+    font-size: 8vw;
+    color: grey;
+    align-items: flex-start;
+}
+
+.stage-info{
+    font-family: 'Kanit', sans-serif;
+    color: grey;
+    font-size: 1.5vw;
+}
+
+.info-head, .info-head-trans{
+    font-weight: 800;          
+    font-size: 2.5vw;
+}
+
+@media(max-width: 1000px){
+    .stage-index{
+        font-size: 80px;
+    }
+
+    .stage-info{
+        font-size: 18px;
+    }
+
+    .info-head, .info-head-trans{
+        font-size: 25px;
+    }
+}
+
+@media(max-width: 500px){
+    .about-box{
+        transform: translateX(0);
+        margin: auto;
+    }
+
+    .ship, .truck{
+        transform: translateX(40vw);
+    }
+}
+
+.about-box{
+    position: relative;
+    width: 100px;
+    height: 70px;
+    display: block;
+    opacity: 1;
+    transform: translateX(0vw);
+    transition: transform 1s ease-in-out;
+    z-index: 0;
+}
+
+.box-outline{
+    position: absolute;
+    width: 100px;
+    height: 70px;
+    background-color: #167f92;
+}
+
+.left-lid{
+    position: absolute;
+    top: -3px;
+    left: 0px;
+    height: 2px;
+    width: 49px;
+    background-color: #167f92;
+    transform-origin: left bottom;
+    transform: rotate(120deg);
+    transition: transform 0.5s ease-in-out;
+
+}
+
+.right-lid{
+    position: absolute;
+    top: -3px;
+    right: 0px;
+    height: 2px;
+    width: 49px;
+    background-color: #167f92;
+    transform-origin: right bottom;
+    transform: rotate(240deg);
+    transition: transform 0.5s ease-in-out;
+
+}
+
+.seed_packet, .seed_packet2, .dry_packet{
+    position: absolute;
+    height: 40px;
+    z-index: -1;
+    transition: transform 0.5s ease-in-out;
+}
+
+.seed_packet{
+    transform: translate(0, -40px);
+}
+
+.seed_packet2{
+    transform: translate(60px, -40px);
+}
+
+.dry_packet{
+    transform: translate(30px, -50px);
+}
+
+.ship{
+    position: relative;
+    transform: translate(65vw);
+    transition: transform 1s;
+    display: block;
+}
+
+.svg-ship{
+    height: 150px;
+}
+
+.smoke{
+    transform: translate(10px, -90px);
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #167f92;
+    opacity: 1;
+}
+
+.smoke1{
+    animation: smoke1 5s ease-in-out infinite;
+}
+
+.smoke2{
+    animation: smoke2 5s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+.smoke3{
+    animation: smoke3 7s ease-in-out infinite;
+    animation-delay: 2s;
+}
+
+@keyframes smoke1{
+    0%{}
+    50%{
+        height: 15px;
+        width: 15px;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        transform: translate(20px, -140px);
+        opacity: 0;
+    }
+}
+
+@keyframes smoke2{
+    0%{}
+    50%{
+        height: 15px;
+        width: 15px;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        transform: translate(20px, -140px);
+        opacity: 0;
+    }
+}
+
+@keyframes smoke3{
+    0%{}
+    50%{
+        height: 15px;
+        width: 15px;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        transform: translate(20px, -140px);
+        opacity: 0;
+    }
+}
+
+.stage2{
+    text-align: right;
+}
+
+.svg-truck{
+    height: 120px;
+}
+
+.truck{
+    margin-top: 20px;
+    position: relative;
+    transform: translateX(0);
+    transition: transform 1s;
+}
+
+@media(max-width: 500px){
+    .about-box{
+        transform: translateX(0);
+        margin: auto;
+    }
+
+    .ship, .truck{
+        transform: translateX(32vw);
+    }
+}
