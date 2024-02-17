@@ -1,41 +1,34 @@
 var confirm = document.getElementsByClassName("quotConfirmation");
 
 document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    setTimeout(function(){
-        confirm[0].style.display = "block";
-    }, 2000);
+  event.preventDefault();
 
-    const formData = new FormData(this);
-    const data = {};
-    formData.forEach((value, key) => {
-      data[key] = value;
-    });
+  const formData = new FormData(this);
 
-    fetch('/sendQuot', { // Change this URL to your server-side endpoint
+  fetch('https://us-central1-sgglobalrep.cloudfunctions.net/sendQuot', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-    //   alert('Email sent successfully');
-      // Optionally clear the form fields or provide other feedback to the user
-    })
-    .catch(error => {
-    //   console.error('There was a problem with your fetch operation:', error.message);
-    //   alert('Failed to send email');
-    });
-  });
-
-  var done = document.getElementsByClassName("doneConfirm");
-  done[0].addEventListener('click', function(){
-    setTimeout(function(){
-        confirm[0].style.display = "";
-    }, 1000);
-    location.reload();
+      body: formData
   })
+  .then(response => {
+      if (!response.ok) {
+          throw new Error('Network response was not ok');
+      }
+      return response.json();
+  })
+  .then(data => {
+      console.log(data);
+      alert('Email sent successfully!');
+  })
+  .catch(error => {
+      console.error('There was a problem with your fetch operation:', error);
+      alert('Failed to send email. Please try again later.');
+  });
+});
+
+var done = document.getElementsByClassName("doneConfirm");
+done[0].addEventListener('click', function(){
+  setTimeout(function(){
+      confirm[0].style.display = "";
+  }, 1000);
+  location.reload();
+})
