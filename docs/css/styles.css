@@ -10901,8 +10901,8 @@ p {
 }
 
 #mainNav {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 5px;
+  padding-bottom: 5px;
   background-color: #001F3F;
 }
 #mainNav.navbar-shrink{
@@ -10956,8 +10956,8 @@ p {
 
 @media (min-width: 992px) {
   #mainNav {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-top: 0px;
+    padding-bottom: 0px;
     border: none;
     background-color: transparent;
     transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
@@ -10967,8 +10967,8 @@ p {
     transition: font-size 0.3s ease-in-out;
   }
   #mainNav.navbar-shrink {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 0px;
+    padding-bottom: 0px;
     background-color: #001F3F;
   }
   #mainNav.navbar-shrink .navbar-brand {
@@ -11077,6 +11077,38 @@ header.masthead .masthead-heading {
   display: block;
   margin: 0 auto;
 }
+
+
+.products-heading{
+  font-size: 35px;
+  margin-bottom: -50px;
+  color: #001f3f;
+  letter-spacing: 2px;
+  font-family: 'Protest Strike', sans-serif;
+}
+
+.products-desc{
+  padding: 80px 100px 0;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: italic;
+  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  margin-bottom: 4rem;
+}
+
+@media(max-width: 900px){
+  .products-desc{
+      padding: 80px 50px 0;
+  }
+}
+
+@media(max-width: 450px){
+  .products-desc{
+      padding: 80px 15px 0;
+  }
+}
+
 .product-hover {
   display: flex;
   position: absolute;
@@ -11973,4 +12005,8 @@ body{
     width: 90vw;
     left: 5vw;
   }
+}
+
+.phonespace{
+  margin-left: 20px;
 }
