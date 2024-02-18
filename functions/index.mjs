@@ -37,7 +37,7 @@ export const sendEmail = functions.https.onRequest((req, res) => {
             from : 'info@sgglobal.co.in',
             to : sender,
             subject : 'Thank You for contacting us',
-            html : '<div><h3>Thank You ' + name + ', We are grateful to you for dedicating your time to send us an email. We will get back to you<br></h3></div> ---------------- <b><h3>Rajiv Kumar</h3></b>Managing Director  <br>Mobile: +91 98127 00081 <br>Email: info@sgglobal.co.in  <br><img src="https://drive.google.com/uc?export=view&id=1cOAgWFNHkMgWS9x1tpvOtzV9NJI1sDb3" style="width:150px; height:auto;" /><br>  <h3 style="color:grey;">SG GLOBAL</h3> Address: SCO No. 200, <br>Transport Nagar, Sector - 25, <br>Panipat (PIN - 132103), <br>Haryana, India',
+            html : '<div>Thank You ' + name + ',<br><br> We appreciate you taking the time to reach out to us. We\'ll be in touch shortly.<br></h3></div> ---------------- <br><br>Best Regards,<b><h3>SG Global Team</b>  <br>Mobile: +91 98127 00081 <br>Email: info@sgglobal.co.in  <br><img src="https://drive.google.com/uc?export=view&id=1cOAgWFNHkMgWS9x1tpvOtzV9NJI1sDb3" style="width:150px; height:auto;" /><br>  <h3 style="color:grey;">SG GLOBAL</h3> Address: SCO No. 200, <br>Transport Nagar, Sector-25, <br>Panipat (PIN-132103), <br>Haryana, India',
         }
 
         var mailOptions2 = {
@@ -105,9 +105,7 @@ export const sendQuot = functions.https.onRequest((req, res) => {
             from : 'info@sgglobal.co.in',
             to : sender,
             subject : 'Thank you for your enquiry!',
-            html : '<div><h3>Thank You ' + name + ', We are grateful to you for dedicating your time to send us an email. We will get back to you<br></h3></div> ---------------- <b><h3>Rajiv Kumar</h3></b>Managing Director  <br>Mobile: +91 98127 00081 <br>Email: info@sgglobal.co.in  <br><img src="https://drive.google.com/uc?export=view&id=1cOAgWFNHkMgWS9x1tpvOtzV9NJI1sDb3" style="width:150px; height:auto;" /><br>  <h3 style="color:grey;">SG GLOBAL</h3> Address: SCO No. 200, <br>Transport Nagar, Sector - 25, <br>Panipat (PIN - 132103), <br>Haryana, India',
-
-            
+            html : '<div>Dear ' + name + ',<br><br> Thank you for your quotation query. Our team is currently reviewing the details you provided, and we will respond to your inquiry as soon as possible.<br><br>We look forward to the possibility of working with you.<br><br></div> ---------------- <br>Best Regards,<b><h3>SG Global Team</h3></b>  <br>Mobile: +91 98127 00081 <br>Email: info@sgglobal.co.in  <br><img src="https://drive.google.com/uc?export=view&id=1cOAgWFNHkMgWS9x1tpvOtzV9NJI1sDb3" style="width:150px; height:auto;" /><br>  <h3 style="color:grey;">SG GLOBAL</h3> Address: SCO No. 200, <br>Transport Nagar, Sector-25, <br>Panipat (PIN-132103), <br>Haryana, India',
         }
 
         var mailOptions2 = {
