@@ -72,7 +72,6 @@ window.addEventListener("load", function(){
 //footer
 let footerElems = document.querySelectorAll(".footer-company-about");
 let wrappers = document.querySelectorAll(".footer-about-wrapper");
-let footerDropdowns = document.querySelectorAll(".footer-dropdown");
 wrappers[0].addEventListener("mouseover", function(){
     footerElems[0].classList.add("footer-company-about-hover");
 })
@@ -97,4 +96,45 @@ wrappers[3].addEventListener("focus", function(){
 wrappers[3].addEventListener("blur", function(){
     footerElems[3].classList.remove("footer-company-about-hover");
 })
+
+let footerDropdownHeaders = document.querySelectorAll(".small-footer .footer-dropdown-header");
+let footerDropdownContent = document.querySelectorAll(".small-footer .drop-down-content");
+let DropdownIcon = document.querySelectorAll(".dropdownicon");
+
+console.log("Number of DropdownIcon:", DropdownIcon[0]);
+
+for (var ind = 0; ind < footerDropdownHeaders.length; ind++) {
+    (function(index) { // Using an immediately invoked function expression (IIFE) to capture the current value of 'ind'
+        footerDropdownHeaders[index].addEventListener('click', function() {
+            footerDropdownHeaders[index].classList.toggle('open');
+            x = footerDropdownContent[index].style.maxHeight;
+            y = parseInt(x,10);
+            console.log(x);
+            if(y == 200){
+                DropdownIcon[index].style.transform = "rotate(0deg)";
+                footerDropdownContent[index].style.maxHeight = "0px";
+            }else{
+                DropdownIcon[index].style.transform = "rotate(180d)";
+                footerDropdownContent[index].style.maxHeight = "200px";
+            }
+        });
+
+    })(ind);
+}
+
+for (var ind = 0; ind < footerDropdownHeaders.length; ind++) {
+    (function(index) { // Using an immediately invoked function expression (IIFE) to capture the current value of 'ind'
+        document.addEventListener('click', function(event) {
+            let aa = footerDropdownContent[index].contains(event.target);
+            let bb = footerDropdownHeaders[index].contains(event.target);
+            if (!aa && !bb) {
+              if(footerDropdownHeaders[index].classList.contains('open')){
+                footerDropdownHeaders[index].classList.remove('open');
+                footerDropdownContent[index].style.maxHeight = "0px";
+                DropdownIcon[index].style.transform = "rotate(0deg)";
+              }
+            }
+          });
+    })(ind);
+}
 

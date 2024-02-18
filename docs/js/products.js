@@ -33,54 +33,13 @@ function prefillForm(){
 	document.getElementById("producti").value = prod;
 }
 
-let popup1 = document.getElementById("popup1")
-let closePopup1 = document.getElementById("closePopup1")
-products[0].addEventListener("click", function(){
-	popup1.showModal();
-})
-closePopup1.addEventListener("click", function(){
-	popup1.close();
-})
-
-let popup2 = document.getElementById("popup2")
-let closePopup2 = document.getElementById("closePopup2")
-products[1].addEventListener("click", function(){
-	popup2.showModal();
-})
-closePopup2.addEventListener("click", function(){
-	popup2.close();
-})
-
-let popup3 = document.getElementById("popup3")
-let closePopup3 = document.getElementById("closePopup3")
-products[2].addEventListener("click", function(){
-	popup3.showModal();
-})
-closePopup3.addEventListener("click", function(){
-	popup3.close();
-})
-
-let popup4 = document.getElementById("popup4")
-let closePopup4 = document.getElementById("closePopup4")
-products[3].addEventListener("click", function(){
-	popup4.showModal();
-})
-closePopup4.addEventListener("click", function(){
-	popup4.close();
-})
-
-let popup5 = document.getElementById("popup5")
-let closePopup5 = document.getElementById("closePopup5")
-products[4].addEventListener("click", function(){
-	popup5.showModal();
-})
-closePopup5.addEventListener("click", function(){
-	popup5.close();
-})
+let makhaneProducts = document.querySelectorAll(".makhana-slider .products");
+let seedsProducts = document.querySelectorAll(".seeds-slider .products");
+let dryfruitsProducts = document.querySelectorAll(".dryfruits-slider .products");
 
 let popup11 = document.getElementById("popup11")
 let closePopup11 = document.getElementById("closePopup11")
-products[5].addEventListener("click", function(){
+makhaneProducts[0].addEventListener("click", function(){
 	popup11.showModal();
 })
 closePopup11.addEventListener("click", function(){
@@ -89,7 +48,7 @@ closePopup11.addEventListener("click", function(){
 
 let popup12 = document.getElementById("popup12")
 let closePopup12 = document.getElementById("closePopup12")
-products[6].addEventListener("click", function(){
+makhaneProducts[1].addEventListener("click", function(){
 	popup12.showModal();
 })
 closePopup12.addEventListener("click", function(){
@@ -98,7 +57,7 @@ closePopup12.addEventListener("click", function(){
 
 let popup13 = document.getElementById("popup13")
 let closePopup13 = document.getElementById("closePopup13")
-products[7].addEventListener("click", function(){
+makhaneProducts[2].addEventListener("click", function(){
 	popup13.showModal();
 })
 closePopup13.addEventListener("click", function(){
@@ -107,7 +66,7 @@ closePopup13.addEventListener("click", function(){
 
 let popup14 = document.getElementById("popup14")
 let closePopup14 = document.getElementById("closePopup14")
-products[8].addEventListener("click", function(){
+makhaneProducts[3].addEventListener("click", function(){
 	popup14.showModal();
 })
 closePopup14.addEventListener("click", function(){
@@ -116,27 +75,117 @@ closePopup14.addEventListener("click", function(){
 
 let popup15 = document.getElementById("popup15")
 let closePopup15 = document.getElementById("closePopup15")
-products[9].addEventListener("click", function(){
+makhaneProducts[4].addEventListener("click", function(){
 	popup15.showModal();
 })
 closePopup15.addEventListener("click", function(){
 	popup15.close();
 })
 
-let popup16 = document.getElementById("popup16")
-let closePopup16 = document.getElementById("closePopup16")
-products[10].addEventListener("click", function(){
-	popup16.showModal();
+let popup21 = document.getElementById("popup21")
+let closePopup21 = document.getElementById("closePopup21")
+dryfruitsProducts[0].addEventListener("click", function(){
+	popup21.showModal();
 })
-closePopup16.addEventListener("click", function(){
-	popup16.close();
+closePopup21.addEventListener("click", function(){
+	popup21.close();
 })
 
-let popup17 = document.getElementById("popup17")
-let closePopup17 = document.getElementById("closePopup17")
-products[11].addEventListener("click", function(){
-	popup17.showModal();
+let popup22 = document.getElementById("popup22")
+let closePopup22 = document.getElementById("closePopup22")
+dryfruitsProducts[1].addEventListener("click", function(){
+	popup22.showModal();
 })
-closePopup17.addEventListener("click", function(){
-	popup17.close();
+closePopup22.addEventListener("click", function(){
+	popup22.close();
+})
+
+let popup23 = document.getElementById("popup23")
+let closePopup23 = document.getElementById("closePopup23")
+dryfruitsProducts[2].addEventListener("click", function(){
+	popup23.showModal();
+})
+closePopup23.addEventListener("click", function(){
+	popup23.close();
+})
+
+let popup24 = document.getElementById("popup24")
+let closePopup24 = document.getElementById("closePopup24")
+dryfruitsProducts[3].addEventListener("click", function(){
+	popup24.showModal();
+})
+closePopup24.addEventListener("click", function(){
+	popup24.close();
+})
+
+let popup25 = document.getElementById("popup25")
+let closePopup25 = document.getElementById("closePopup25")
+dryfruitsProducts[4].addEventListener("click", function(){
+	popup25.showModal();
+})
+closePopup25.addEventListener("click", function(){
+	popup25.close();
+})
+
+let popup31 = document.getElementById("popup31")
+let closePopup31 = document.getElementById("closePopup31")
+seedsProducts[0].addEventListener("click", function(){
+	popup31.showModal();
+})
+closePopup31.addEventListener("click", function(){
+	popup31.close();
+})
+
+let popup32 = document.getElementById("popup32")
+let closePopup32 = document.getElementById("closePopup32")
+seedsProducts[1].addEventListener("click", function(){
+	popup32.showModal();
+})
+closePopup32.addEventListener("click", function(){
+	popup32.close();
+})
+
+let popup33 = document.getElementById("popup33")
+let closePopup33 = document.getElementById("closePopup33")
+seedsProducts[2].addEventListener("click", function(){
+	popup33.showModal();
+})
+closePopup33.addEventListener("click", function(){
+	popup33.close();
+})
+
+let popup34 = document.getElementById("popup34")
+let closePopup34 = document.getElementById("closePopup34")
+seedsProducts[3].addEventListener("click", function(){
+	popup34.showModal();
+})
+closePopup34.addEventListener("click", function(){
+	popup34.close();
+})
+
+let popup35 = document.getElementById("popup35")
+let closePopup35 = document.getElementById("closePopup35")
+seedsProducts[4].addEventListener("click", function(){
+	popup35.showModal();
+})
+closePopup35.addEventListener("click", function(){
+	popup35.close();
+})
+
+let popup36 = document.getElementById("popup36")
+let closePopup36 = document.getElementById("closePopup36")
+seedsProducts[5].addEventListener("click", function(){
+	popup36.showModal();
+})
+closePopup36.addEventListener("click", function(){
+	popup36.close();
+})
+
+let popup37 = document.getElementById("popup37")
+let closePopup37 = document.getElementById("closePopup37")
+seedsProducts[6].addEventListener("click", function(){
+	popup37.showModal();
+})
+closePopup37.addEventListener("click", function(){
+	popup37.close();
 })

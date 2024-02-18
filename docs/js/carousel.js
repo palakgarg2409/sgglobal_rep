@@ -1,16 +1,18 @@
 var sliders = document.getElementsByClassName("p-slider");
 var sliderContainers = document.getElementsByClassName("cont");
-var product = [sliders[0].querySelectorAll(".products"), sliders[1].querySelectorAll(".products")];
+var product = [sliders[0].querySelectorAll(".products"), sliders[1].querySelectorAll(".products"), sliders[2].querySelectorAll(".products")];
 const slideW = product[0][0].offsetWidth;
-const slides = [product[0].length, product[1].length];
-let counter = [0, 0];
+const slides = [product[0].length, product[1].length, product[2].length];
+let counter = [0, 0, 0];
+let makhL = document.getElementsByClassName("makh-left")[0];
+let makhR = document.getElementsByClassName("makh-right")[0];
 let dryL = document.getElementsByClassName("dry-left")[0];
 let dryR = document.getElementsByClassName("dry-right")[0];
 let seedL = document.getElementsByClassName("seeds-left")[0];
 let seedR = document.getElementsByClassName("seeds-right")[0];
 
 const frameW = [slides[0] * slideW, slides[1] * slideW];
-let offset = [0, 0];
+let offset = [0, 0, 0];
 
 function nextSlide(i){
     counter[i] = (counter[i] + 1) % slides[i];
@@ -46,16 +48,17 @@ function PplaySlider(i){
     sliders[i].style.transform = 'translateX(' + offset[i] + 'px)';
 }
 
-let Id = [0,0]
+let Id = [0,0,0]
 Id[0] = setInterval(function(){nextSlide(0)}, 3000);
 Id[1] = setInterval(function(){nextSlide(1)}, 3000);
+Id[2] = setInterval(function(){nextSlide(2)}, 3000);
 
-let startX = [0, 0];
-let isDragging = [false, false];
-let currentX = [0, 0];
-let diffX = [0, 0];
+let startX = [0, 0, 0];
+let isDragging = [false, false, false];
+let currentX = [0, 0, 0];
+let diffX = [0, 0, 0];
 
-for (let i = 0; i < 2; i++) {
+for (let i = 0; i < 3; i++) {
     if (!sliders[i]) continue;
 
     sliders[i].addEventListener('touchstart', (e) => {
@@ -104,26 +107,54 @@ sliders[0].addEventListener('blur', ()=>{
     Id[0] = setInterval(()=>{nextSlide(0);}, 3000);
 })
 
-dryL.addEventListener("click", function(){
+sliders[1].addEventListener('focus', ()=>{
+    clearInterval(Id[1]);
+})
+
+sliders[1].addEventListener('blur', ()=>{
+    Id[1] = setInterval(()=>{nextSlide(1);}, 3000);
+})
+
+sliders[2].addEventListener('focus', ()=>{
+    clearInterval(Id[2]);
+})
+
+sliders[2].addEventListener('blur', ()=>{
+    Id[2] = setInterval(()=>{nextSlide(2);}, 3000);
+})
+
+makhL.addEventListener("click", function(){
     clearInterval(Id[0]);
     prevSlide(0);
     Id[0] = setInterval(function(){nextSlide(0);}, 3000);
 })
 
-dryR.addEventListener("click", function(){
+makhR.addEventListener("click", function(){
     clearInterval(Id[0]);
     nextSlide(0);
     Id[0] = setInterval(function(){nextSlide(0);}, 3000);
 })
 
-seedL.addEventListener("click", function(){
+dryL.addEventListener("click", function(){
     clearInterval(Id[1]);
     prevSlide(1);
     Id[1] = setInterval(function(){nextSlide(1);}, 3000);
 })
 
-seedR.addEventListener("click", function(){
+dryR.addEventListener("click", function(){
     clearInterval(Id[1]);
     nextSlide(1);
     Id[1] = setInterval(function(){nextSlide(1);}, 3000);
+})
+
+seedL.addEventListener("click", function(){
+    clearInterval(Id[2]);
+    prevSlide(2);
+    Id[2] = setInterval(function(){nextSlide(2);}, 3000);
+})
+
+seedR.addEventListener("click", function(){
+    clearInterval(Id[2]);
+    nextSlide(2);
+    Id[2] = setInterval(function(){nextSlide(2);}, 3000);
 })
