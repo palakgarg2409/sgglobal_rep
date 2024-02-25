@@ -36,15 +36,16 @@ export const sendEmail = functions.https.onRequest((req, res) => {
         var mailOptions = {
             from : 'info@sgglobal.co.in',
             to : sender,
-            subject : 'Thank You for contacting us',
-            html : '<div>Thank You ' + name + ',<br><br> We appreciate you taking the time to reach out to us. We\'ll be in touch shortly.<br></h3></div> ---------------- <br><br>Best Regards,<b><h3>SG Global Team</b>  <br>Mobile: +91 98127 00081 <br>Email: info@sgglobal.co.in  <br><img src="https://drive.google.com/uc?export=view&id=1cOAgWFNHkMgWS9x1tpvOtzV9NJI1sDb3" style="width:150px; height:auto;" /><br>  <h3 style="color:grey;">SG GLOBAL</h3> Address: SCO No. 200, <br>Transport Nagar, Sector-25, <br>Panipat (PIN-132103), <br>Haryana, India',
+            subject : 'Thank you for contacting us!',
+            html : '<div>Thank you ' + name + ',<br><br> We appreciate you taking the time to reach out to us. We\'ll be in touch shortly.<br><br></h3></div> ---------------- <br><br>Best Regards,<b><h3>SG Global Team</b>  <br>Mobile: +91 98127 00081 <br>Email: info@sgglobal.co.in  <br><img src="https://drive.google.com/uc?export=view&id=1cOAgWFNHkMgWS9x1tpvOtzV9NJI1sDb3" style="width:150px; height:auto;" /><br>  <h3 style="color:grey;">SG GLOBAL</h3> Address: SCO No. 200, <br>Transport Nagar, Sector-25, <br>Panipat (PIN-132103), <br>Haryana, India',
         }
 
         var mailOptions2 = {
             from : 'info@sgglobal.co.in',
             to : 'info@sgglobal.co.in',
-            subject : 'Feedback',
-            html : '<div><h4>Feedback Added: </h4></div><div><h3>' + msg + '</h3></div>'+
+            subject : 'Inquiry from '+ name,
+            html : '<div><h4>Message: </h4></div><div>' + msg + '</div>'+
+                '<br><br>Contacted by:' +
                 '<br><div style="color: grey;"> Name: ' + name + '</div>' +
                 '<div style="color: grey;"> Email: ' + sender + '</div>' + 
                 '<div style="color: grey;"> Contact: ' + contact + '</div>'
@@ -111,11 +112,11 @@ export const sendQuot = functions.https.onRequest((req, res) => {
         var mailOptions2 = {
             from : 'info@sgglobal.co.in',
             to : 'info@sgglobal.co.in',
-            subject : 'Quotation for ' + product,
+            subject : 'Quotation query for ' + product,
             html : '<div><h4>Quotation Requested for ' + product + '</h4></div>'+
-                '<br><h3>Quantity: ' + quantity + '</h3>' +
-                '<br>Message Added: <br>' + msg +
-                '<br><br>Asked by:' + 
+                'Quantity: ' + quantity  +
+                '<br><br>Message: <br>' + msg +
+                '<br><br>Query from:' + 
                 '<br><div style="color: grey;"> Name: ' + name + '</div>' +
                 '<div style="color: grey;"> Email: ' + sender + '</div>' + 
                 '<div style="color: grey;"> Contact: ' + contact + '</div>'

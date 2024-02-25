@@ -10950,7 +10950,7 @@ p {
     height: 18px;
   }
   .nav-logo{
-    height: 30px;
+    height: 50px;
   }
 }
 
@@ -11001,13 +11001,15 @@ header.masthead {
   max-width:1000px
 ) {
   header.masthead{
-    background: linear-gradient(180deg, rgba(0,0,0,0.5), rgba(0,0,0,0.2)), url("../assets/mobilepic.png");
+    padding-top: 10.5rem;
+    padding-bottom: 6rem;
+    background: linear-gradient(180deg, rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url("../assets/mobile.jpg");
     background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center center;
-  background-size: cover;
-  background-color: rgba(0,0,0,0.6);
-  background-blend-mode: overlay;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-color: rgba(0,0,0,0.6);
+    background-blend-mode: overlay;
   }
 
 }
@@ -11718,10 +11720,11 @@ section#portfolio {
   margin-bottom: 10px;
   width: 2000px;
   overflow-x: hidden;
+  transform: translateX(0);
   transition: transform 1s ease-in-out;
   overflow: hidden;
   position: relative;
-  transform: translateX(0);
+  
 }
 
 .slider-heading{
@@ -11826,7 +11829,9 @@ section#portfolio {
 }
 
 .makhana-slider{
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   position: relative;
   background: linear-gradient(270deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1));
 }
@@ -11892,7 +11897,7 @@ section#portfolio {
 }
 
 .products{
-  width: 200px;
+  width: 300px;
   margin-bottom: 0px;
   display: inline-block;
   transition: transform 2s ease, width 2s ease;
