@@ -1,8 +1,16 @@
 var sliders = document.getElementsByClassName("p-slider");
 var sliderContainers = document.getElementsByClassName("cont");
-var product = [sliders[0].querySelectorAll(".products"), sliders[1].querySelectorAll(".products"), sliders[2].querySelectorAll(".products")];
+
+//var product = [sliders[0].querySelectorAll(".products"), sliders[1].querySelectorAll(".products"), sliders[2].querySelectorAll(".products")];
+//below only for only foxnuts code
+var product = [sliders[0].querySelectorAll(".products")];
+
 const slideW = product[0][0].offsetWidth;
-const slides = [product[0].length, product[1].length, product[2].length];
+
+//const slides = [product[0].length, product[1].length, product[2].length];
+//below only for only foxnuts code
+const slides = [product[0].length];
+
 let counter = [0, 0, 0];
 let makhL = document.getElementsByClassName("makh-left")[0];
 let makhR = document.getElementsByClassName("makh-right")[0];
@@ -50,15 +58,16 @@ function PplaySlider(i){
 
 let Id = [0,0,0]
 Id[0] = setInterval(function(){nextSlide(0)}, 3000);
-Id[1] = setInterval(function(){nextSlide(1)}, 3000);
-Id[2] = setInterval(function(){nextSlide(2)}, 3000);
+//Id[1] = setInterval(function(){nextSlide(1)}, 3000);
+//Id[2] = setInterval(function(){nextSlide(2)}, 3000);
 
 let startX = [0, 0, 0];
 let isDragging = [false, false, false];
 let currentX = [0, 0, 0];
 let diffX = [0, 0, 0];
 
-for (let i = 0; i < 3; i++) {
+//change to 3 if want to show all sliders
+for (let i = 0; i < 1; i++) {
     if (!sliders[i]) continue;
 
     sliders[i].addEventListener('touchstart', (e) => {
@@ -107,21 +116,21 @@ sliders[0].addEventListener('blur', ()=>{
     Id[0] = setInterval(()=>{nextSlide(0);}, 3000);
 })
 
-sliders[1].addEventListener('focus', ()=>{
-    clearInterval(Id[1]);
-})
+// sliders[1].addEventListener('focus', ()=>{
+//     clearInterval(Id[1]);
+// })
 
-sliders[1].addEventListener('blur', ()=>{
-    Id[1] = setInterval(()=>{nextSlide(1);}, 3000);
-})
+// sliders[1].addEventListener('blur', ()=>{
+//     Id[1] = setInterval(()=>{nextSlide(1);}, 3000);
+// })
 
-sliders[2].addEventListener('focus', ()=>{
-    clearInterval(Id[2]);
-})
+// sliders[2].addEventListener('focus', ()=>{
+//     clearInterval(Id[2]);
+// })
 
-sliders[2].addEventListener('blur', ()=>{
-    Id[2] = setInterval(()=>{nextSlide(2);}, 3000);
-})
+// sliders[2].addEventListener('blur', ()=>{
+//     Id[2] = setInterval(()=>{nextSlide(2);}, 3000);
+// })
 
 makhL.addEventListener("click", function(){
     clearInterval(Id[0]);
@@ -135,26 +144,26 @@ makhR.addEventListener("click", function(){
     Id[0] = setInterval(function(){nextSlide(0);}, 3000);
 })
 
-dryL.addEventListener("click", function(){
-    clearInterval(Id[1]);
-    prevSlide(1);
-    Id[1] = setInterval(function(){nextSlide(1);}, 3000);
-})
+// dryL.addEventListener("click", function(){
+//     clearInterval(Id[1]);
+//     prevSlide(1);
+//     Id[1] = setInterval(function(){nextSlide(1);}, 3000);
+// })
 
-dryR.addEventListener("click", function(){
-    clearInterval(Id[1]);
-    nextSlide(1);
-    Id[1] = setInterval(function(){nextSlide(1);}, 3000);
-})
+// dryR.addEventListener("click", function(){
+//     clearInterval(Id[1]);
+//     nextSlide(1);
+//     Id[1] = setInterval(function(){nextSlide(1);}, 3000);
+// })
 
-seedL.addEventListener("click", function(){
-    clearInterval(Id[2]);
-    prevSlide(2);
-    Id[2] = setInterval(function(){nextSlide(2);}, 3000);
-})
+// seedL.addEventListener("click", function(){
+//     clearInterval(Id[2]);
+//     prevSlide(2);
+//     Id[2] = setInterval(function(){nextSlide(2);}, 3000);
+// })
 
-seedR.addEventListener("click", function(){
-    clearInterval(Id[2]);
-    nextSlide(2);
-    Id[2] = setInterval(function(){nextSlide(2);}, 3000);
-})
+// seedR.addEventListener("click", function(){
+//     clearInterval(Id[2]);
+//     nextSlide(2);
+//     Id[2] = setInterval(function(){nextSlide(2);}, 3000);
+// })
